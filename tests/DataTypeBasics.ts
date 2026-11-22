@@ -1,8 +1,9 @@
 
+let  i = 10 // Type Inference  >> assigned number automatically
 
 /////////////////////String
 
-let firstName: string = `Kiran`;
+let firstName: string = `Kiran`;  // Type Annotations
 let title: string = ` Hole`;
 let profile: string = `My name is ${firstName}. 
                         & Surname is ${title}`;
@@ -22,3 +23,12 @@ let big: bigint = 9007199254740991n; // represent whole numbers larger than 2^53
 let pending: boolean;
 pending = true;
 pending = false;
+
+
+/************ANY >>> AVOID********/
+let prime : any 
+if (prime)
+    console.log("any check")
+
+/****** Use undefined instead of Any */
+let prime2: undefined
