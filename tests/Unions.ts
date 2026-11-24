@@ -6,7 +6,7 @@ airlineSeat = 'window'
 airlineSeat = 'copilot'  //Error: Type '"copilot"' is not assignable to type '"window" | "aisle" | "middle"'.
 
 
-/****** Type Narrowing >> when type is UNION narrow it down to distinct type*********/
+/****** (Type Guard )Type Narrowing >> when type is UNION narrow it down to distinct type*********/
 
 function getID(id : string | number):string
 {

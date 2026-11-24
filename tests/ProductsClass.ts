@@ -2,6 +2,7 @@ class ProductsClass {
    readonly name : string;
    protected price : number;
    private pId : number;
+   prodID: number = 0;
    public inCart : boolean = false;
 
    constructor(name: string, price : number, pId : number) {
@@ -14,7 +15,14 @@ class ProductsClass {
     this.inCart = true;
    }
 
-   getPId() : number {
+   // Setter
+   set PId(val: number)
+   {
+    this.prodID = this.pId
+   } 
+
+   //Gettter
+   get PId() : number {
     return this.pId = this.pId;
    }
 
@@ -37,7 +45,7 @@ class PremiumProdcutsClass extends ProductsClass{
     }
 
     disccount() : string {
-        if (prod.getPId() === 123)
+        if (prod.PId === 123)
             return `received 20% discount, new price : ${this.price*0.80}`
         else 
             return `Discount not available`
